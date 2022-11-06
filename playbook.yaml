@@ -4,7 +4,7 @@
   tasks:
     - name: Clone a Repository
       git:
-        repo: https://github.com/developer-mide/ansible-project.git # change to repository
+        repo: https://github.com/developer-mide/ansible-project.git # use SSH to connect to private repo 
         dest: /opt/sgc
         clone: yes
         update: yes
