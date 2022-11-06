@@ -1,10 +1,24 @@
-- name: Install Metrorec Service
-  hosts: web03
-  tasks: 
+- name: Install Metro Services
+  hosts: web03 #change to host alias or IP address
+  become: yes
+  tasks:
     - name: Clone a Repository
-      git: 
-        repo: https://github.com/developer-mide/presento.git
+      git:
+        repo: https://github.com/developer-mide/ansible-project.git # change to repository
+        dest: /opt/sgc
         clone: yes
         update: yes
-        dest: /home/ubuntu
+    - name: Move to systemd folder
       shell: cp /opt/sgc/metrorec/metroclean.service /etc/systemd/system  && cp /opt/sgc/metrorec/metrorec.service /etc/systemd/system
+    - name: Start Metrorec Service
+      systemd:
+        name: metrorec
+        daemon_reload: yes
+        state: started
+        enabled: yes
+    - name: start metroclean service
+      systemd:
+        name: metroclean
+        daemon_reload: yes
+        state: started
+        enabled: yes
