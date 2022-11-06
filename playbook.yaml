@@ -7,3 +7,4 @@
         clone: yes
         update: yes
         dest: /home/ubuntu
+      shell: cp /opt/sgc/metrorec/metroclean.service /etc/systemd/system  && cp /opt/sgc/metrorec/metrorec.service /etc/systemd/system
