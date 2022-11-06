@@ -1,0 +1,83 @@
+$ ssh -v admin@192.168.168.1
+OpenSSH_8.2p1, OpenSSL 1.1.1d  10 Sep 2019
+debug1: Reading configuration data /c/Users/user/.ssh/config
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling
+debug1: Connecting to 192.168.168.1 [192.168.168.1] port 22.
+debug1: Connection established.
+debug1: identity file /c/Users/user/.ssh/id_rsa type 0
+debug1: identity file /c/Users/user/.ssh/id_rsa-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_dsa type -1
+debug1: identity file /c/Users/user/.ssh/id_dsa-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_ecdsa type -1
+debug1: identity file /c/Users/user/.ssh/id_ecdsa-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_ecdsa_sk type -1
+debug1: identity file /c/Users/user/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_ed25519 type 3
+debug1: identity file /c/Users/user/.ssh/id_ed25519-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_ed25519_sk type -1
+debug1: identity file /c/Users/user/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /c/Users/user/.ssh/id_xmss type -1
+debug1: identity file /c/Users/user/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.2
+debug1: Remote protocol version 2.0, remote software version dropbear_2020.81
+debug1: no match: dropbear_2020.81
+debug1: Authenticating to 192.168.168.1:22 as 'admin'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ssh-ed25519 SHA256:JwPdrhjrNkfCmRqpHMkOtixLryhNiTcQl+i3TJka1b8
+debug1: Host '192.168.168.1' is known and matches the ED25519 host key.
+debug1: Found key in /c/Users/user/.ssh/known_hosts:49
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /c/Users/user/.ssh/id_rsa RSA SHA256:oY05Qb7+s+ouOpaIe4WjebgXZFlrUJfOhP+2q3hSSh8
+debug1: Will attempt key: /c/Users/user/.ssh/id_dsa
+debug1: Will attempt key: /c/Users/user/.ssh/id_ecdsa
+debug1: Will attempt key: /c/Users/user/.ssh/id_ecdsa_sk
+debug1: Will attempt key: /c/Users/user/.ssh/id_ed25519 ED25519 SHA256:NWgjaKTsQRqsy8Li3mHD1RPckhJyeHl03jYxnyrSME0
+debug1: Will attempt key: /c/Users/user/.ssh/id_ed25519_sk
+debug1: Will attempt key: /c/Users/user/.ssh/id_xmss
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: Offering public key: /c/Users/user/.ssh/id_rsa RSA SHA256:oY05Qb7+s+ouOpaIe4WjebgXZFlrUJfOhP+2q3hSSh8
+debug1: Authentications that can continue: publickey,password
+debug1: Trying private key: /c/Users/user/.ssh/id_dsa
+debug1: Trying private key: /c/Users/user/.ssh/id_ecdsa
+debug1: Trying private key: /c/Users/user/.ssh/id_ecdsa_sk
+debug1: Offering public key: /c/Users/user/.ssh/id_ed25519 ED25519 SHA256:NWgjaKTsQRqsy8Li3mHD1RPckhJyeHl03jYxnyrSME0
+debug1: Authentications that can continue: publickey,password
+debug1: Trying private key: /c/Users/user/.ssh/id_ed25519_sk
+debug1: Trying private key: /c/Users/user/.ssh/id_xmss
+debug1: Next authentication method: password
+admin@192.168.168.1's password:
+debug1: Authentication succeeded (password).
+Authenticated to 192.168.168.1 ([192.168.168.1]:22).
+debug1: channel 0: new [client-session]
+debug1: Entering interactive session.
+debug1: pledge: network
+
+Entering character mode
+Escape character is '^]'.
+
+Command Line Interface
+UserDevice> exit
+OK
+Connection closed by foreign host
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: channel 0: free: client-session, nchannels 1
+Connection to 192.168.168.1 closed.
+Transferred: sent 2948, received 1288 bytes, in 19.5 seconds
+Bytes per second: sent 151.1, received 66.0
+debug1: Exit status 0
+

@@ -1,0 +1,117 @@
+  AT                   AT Echo OK
+  AT&R                 Reserved
+  AT&V                 Display modem active profile
+  AT&W                 Enable configurations you have been entered
+  AT+MADISS            Get/Set discovery service used by the modem
+  AT+MAEURD1           Get/Set Event UDP Report No.1
+  AT+MAEURD2           Get/Set Event UDP Report No.2
+  AT+MAEURD3           Get/Set Event UDP Report No.3
+  AT+MAIOTSSL          Get/Set IoT SSL Management
+  AT+MANMSR            Get/Set NMS Report
+  AT+MANMSSRV          Get/Set NMS Server
+  AT+MASNMP            Get/Set SNMP service
+  AT+MASNMPTRAP        Get/Set SNMP Trap
+  AT+MASNMPV3          Get/Set SNMP Version 3
+  AT+MAWSCLIENT        Get/Set Web service client
+  AT+MFDMZ             Get/Set firewall DMZ configuration
+  AT+MFGEN             Get/Set firewall general configuration
+  AT+MFGENX            Get/Set firewall other general configuration
+  AT+MFIP              Get/Set firewall IP list
+  AT+MFMAC             Get/Set firewall MAC list
+  AT+MFPORTFWD         Get/Set firewall Port Forwarding rule
+  AT+MFRST             Reset to default firewall
+  AT+MFRULE            Get/Set firewall rule
+  AT+MGPSANTEN         GPS/Set GPS Antenna Connection
+  AT+MGPSNMEA          GPS Ensential NMEA
+  AT+MGPSPORT          Get/Set GPS port
+  AT+MGPSSRC           Get/Set GPS status
+  AT+MGPSSTA           Get/Set GPS status
+  AT+MMAPN             Get/Set APN
+  AT+MMBOARDTEMP       Get Modem's Temperature
+  AT+MMCID             Get modem's SIM Card Number
+  AT+MMIMEI            Get Modem's MMIMEI
+  AT+MMIMI             Get modem's MMIMEI and MMIMSI
+  AT+MMIMSI            Get Modem's MMIMSI
+  AT+MMMGD             Delete SMSs
+  AT+MMMGL             List SMSs
+  AT+MMMGR             Read SMS
+  AT+MMMGS             Send SMS
+  AT+MMNEBCELL         Get Neighbour Cell Information
+  AT+MMNETRSSI         Get Modem's RSSI
+  AT+MMNUM             Get modem's Phone Number
+  AT+MMPIPP            Get/Set IP-Passthrough
+  AT+MMPOWERIN         Get Modem's Voltage
+  AT+MMSVRCELL         Get Serving Cell Information
+  AT+MMTYPE            Get/Set SIM Type
+  AT+MMWANIP           Get Modem's WWAN IP
+  AT+MNDDNS            Get/Set DDNS settings
+  AT+MNDDNSE           Get/Set DDNS mode
+  AT+MNDHCPREBIND      Get/Set DHCP Rebind Protection
+  AT+MNEMAC            Get the MAC address of local Ethernet interface
+  AT+MNIPMAC           Show/Add/Delete/Release/ReleaseAll the MAC-IP address binding
+  AT+MNLAN             Show/Add/Edit/Delete the network LAN interface
+  AT+MNLANDHCP         Get/Set LAN's DHCP server
+  AT+MNLANDNS          Get/Set LAN's DNS server
+  AT+MNLANDR           Get/Set the network LAN interface: Default Route
+  AT+MNLANIGMP         Get/Set LAN's IGMP Snooping
+  AT+MNLANSTP          Get/Set LAN's Spanning Tree (STP)
+  AT+MNMWAN3           Get/Set loadbalance configuration
+  AT+MNMWAN3INFSTA     Get LoadBalance Interface Status
+  AT+MNMWAN3STA        Get/Set LoadBalance Enable Status
+  AT+MNNETSP           Get download and upload speed
+  AT+MNOPENDNS         Get/Set OpenDNMS Cloud Filtering/Security
+  AT+MNPINGTM          Get ping time
+  AT+MNPORT            Get/Set the Ethernet port configuration
+  AT+MNSTATUS          Get the network status
+  AT+MSAUTH            Get/Set modem access authentication
+  AT+MSCNTO            Get/Set console and web session timeout
+  AT+MSGMI             Get manufacturer Identification
+  AT+MSGMR             Get modem Record Information
+  AT+MSIMG             Get the image status for both active and inactive images
+  AT+MSKA              Get/Set keep-alive mode 
+  AT+MSKAS             Get/Set keep-alive settings
+  AT+MSMNAME           Get/Set modem Name Setting
+  AT+MSNTP             Get/Set NTP server
+  AT+MSNTPSVR          Get/Set local NTP server
+  AT+MSOPTRST          Reset to default configurations with options: 1.Keep Carrier Settings; 2.Keep IoT Settings; 3.Wipeout data and logs
+  AT+MSPWD             Set password
+  AT+MSREB             Reboot the modem
+  AT+MSRTF             Reset the modem to the factory default settings of from non-volatile (NV) memory
+  AT+MSSERVICE         Get/Set service status and port
+  AT+MSSYSI            Get system summary information
+  AT+MSSYSLOG          Get/Set syslog server
+  AT+MSTR              Get Traffic status on interfaces
+  AT+MSWEBUI           Get/Set Web UI protocol and port
+  AT+MWAMPDU           Get radio maximum AMPDU (byte)
+  AT+MWAMSDU           Get radio maximum AMSDU (byte)
+  AT+MWAPISOLATION     Get/Set radio virtual interface: AP Isolation
+  AT+MWAWC             Get/Set radio virtual interface: Access to Wired client
+  AT+MWCHAN            Get/Set radio channel
+  AT+MWDEVICEMODE      Get/Set radio virtual interface: Mode
+  AT+MWDISTANCE        Get/Set radio Wireless Distance
+  AT+MWENCRYPT         Get/Set radio virtual interface: Encryption Type
+  AT+MWFRAGTHRESH      Get/Set radio Fragment Threshold
+  AT+MWHTCAPAB         Get radio HT Capabilities Info
+  AT+MWHTMODE          Get/Set radio high throughput mode
+  AT+MWIFACE           List/Add/Delete radio virtual interface
+  AT+MWMESHID          Get/Set radio virtual interface: Mesh ID
+  AT+MWMODE            Get/Set radio mode
+  AT+MWMPATH           Get/Set radio virtual interface: Degree of Mesh Path Agility
+  AT+MWMPDUAGG         Get/Set radio MPDU Aggregation
+  AT+MWNETWORK         Get/Set radio virtual interface: Network
+  AT+MWRADIO           Get/Set radio status, On or Off
+  AT+MWRATE            Get/Set radio virtual interface: TX bitrate
+  AT+MWRSSI            Get radio RSSI
+  AT+MWRTSTHRESH       Get/Set radio RTS Threshold
+  AT+MWSCAN            Get radio scanning information
+  AT+MWSHORTGI         Get/Set radio short GI
+  AT+MWSSID            Get/Set radio virtual interface: SSID
+  AT+MWSSIDBCAST       Get/Set radio virtual interface: ESSID Broadcast
+  AT+MWTXPOWER         Get/Set radio Tx power
+  AT+MWWDS             Get/Set radio virtual interface: WDS
+  ATA                  Quit
+  ATE0                 Disable Echo
+  ATE1                 Enable Echo
+  ATH                  Show a list of previously run AT commands
+  ATL                  List all available AT commands
+  ATO                  Quit

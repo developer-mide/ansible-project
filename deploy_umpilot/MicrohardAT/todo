@@ -1,0 +1,71 @@
+
+Using a jump host for cofiguration:
+
+
+ssh utilidata@jnx22u0011 -L1222:192.168.168.1:22 -L2223:192.168.168.1:2223 -L2222:192.168.168.1:2222
+
+
+Create IMEI / SIMID table:
+
+for F in mhdb/*_log; do echo $F $( grep -A 1 -m 1 'IMEI.*8' $F | strings ); done
+
+
+# Change Ethernet port to 100 MBit Half-Duplex!
+
+# Read IMEI & ICCID (called SIMID in the microhard router)
+
+# Minimal secure config when going online:
+
+## Change Password
+
+## Change SSH port (allow tunneling?)
+
+# Disable WebUI (or no remote access to it? disable HTTP & FTP? HTTPS needed for IO2!)
+
+# Deposit SSH key? (secure password for now)
+
+# Activate NTP
+
+# Configure Port Forward(s)
+# Allow "remote access" (to enable port forward)
+
+# remote syslog to jetson (fixed IP)
+
+
+
+# AT comamnds missing/to inquire about:
+## install/manage SSH keys
+## See uptime & description (system information page) (description is always myLTECube-CAT4, btw!)
+## Upload configuration file?
+## Cat4Wifi doesn't have AT+MMDNS (?) To be confirmed!!
+##    AT+MMDNSPIPP - exact meaning, also vs. AT+MNLANDNS (which is part of Cat4Wifi as well)
+## <Use Carrier DNS>       : 0 - Enable, 1 - Disbale  <<< notice "Disbale" typo !!
+##  AT+MSWEBUI=<Mode>                            when <Mode>=3
+## Note        : Not require AT&W    <<<< Contradicts LTECube-CAT4.Manual.v1.2.1.pdf !!!!
+## UserDevice> AT+MSWEBUI=2,4443 <== This doesn't seem to take effect, even after AT&W ! Trying unit reboot... with AT+MSREB
+##  ==> Doesn't stick after reboot either on CAT12. Works on CAT4, and later also worked on CAT4, weird
+
+
+#
+## Test reset to manufacturer defaults !! => works
+
+## Command to set the time zone? (useful for less confusing syslog to jetson)
+
+## access to busybox? (e.g. to query ARP table etc. etc.)
+
+### Todo:
+
+# Try nmap on public IP, other PenTesting
+##	(Also do that on jetson!)
+
+
+
+### Understand IO2 behaviour during reset, and potentially adjust cicruit on the 1000-units to avoid reset when Microhard does wathcdog,
+# Or increase watchdog timeout? (Is there an AT command for that yet?)
+# Since no AT command exists yet, rebooting router to reboot jetson in case of hang a valid option for now?
+
+
+### Question for Microhard:
+# The "preconfig" service, does it store our desired settigns into the NVRAM? i.e. will AT+MSRTF reset to these settings?
+
+

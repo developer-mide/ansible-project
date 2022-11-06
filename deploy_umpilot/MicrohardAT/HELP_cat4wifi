@@ -1,0 +1,1648 @@
+Connected to 127.0.0.1
+
+Command Line Interface
+TestDevice> AT+MAEURD1?
+Mode        : 0. Disabled
+OK
+TestDevice> AT+MAEURD1=?
+Command Syntax:
+AT+MAEURD1[=<Mode>[,<Remote IP>,<Remote Port>,<Interval Time>[,<Interfaces>]]]
+Mode         : 0  Disable
+               1  Modem Event Report
+               2  Management Report
+Remote IP    : valid IP address
+Remote Port  : 0 to 65535
+Interval Time: 0 to 65535 seconds
+Interfaces   : 0  Disable; 1  Enable
+ For Modem Event Report:
+   0 / 1 : Modem
+   0 / 1 : Carrier
+   0 / 1 : WAN IP
+ For Management Report:
+   0 / 1 : Ethernet
+   0 / 1 : Carrier
+   0 / 1 : Network
+OK
+TestDevice> AT+MAEURD1=           
+
+TestDevice> AT+MAEURD2?
+Mode        : 0. Disabled
+OK
+TestDevice> AT+MAEURD2=?
+Command Syntax:
+AT+MAEURD2[=<Mode>[,<Remote IP>,<Remote Port>,<Interval Time>[,<Interfaces>]]]
+Mode         : 0  Disable
+               1  Modem Event Report
+               2  Management Report
+Remote IP    : valid IP address
+Remote Port  : 0 to 65535
+Interval Time: 0 to 65535 seconds
+Interfaces   : 0  Disable; 1  Enable
+ For Modem Event Report:
+   0 / 1 : Modem
+   0 / 1 : Carrier
+   0 / 1 : WAN IP
+ For Management Report:
+   0 / 1 : Ethernet
+   0 / 1 : Carrier
+   0 / 1 : Network
+OK
+TestDevice> AT+MAEURD2=           
+
+TestDevice> AT+MAEURD3?
+Mode        : 0. Disabled
+OK
+TestDevice> AT+MAEURD3=?
+Command Syntax:
+AT+MAEURD3[=<Mode>[,<Remote IP>,<Remote Port>,<Interval Time>[,<Interfaces>]]]
+Mode         : 0  Disable
+               1  Modem Event Report
+               2  Management Report
+Remote IP    : valid IP address
+Remote Port  : 0 to 65535
+Interval Time: 0 to 65535 seconds
+Interfaces   : 0  Disable; 1  Enable
+ For Modem Event Report:
+   0 / 1 : Modem
+   0 / 1 : Carrier
+   0 / 1 : WAN IP
+ For Management Report:
+   0 / 1 : Ethernet
+   0 / 1 : Carrier
+   0 / 1 : Network
+OK
+TestDevice> AT+MAEURD3=           
+
+TestDevice> AT+MANMSR?
+Mode        : 0. Disabled
+OK
+TestDevice> AT+MANMSR=?
+Command Syntax:
+AT+MANMSR[=<Mode>[,<NMS Server/IP>,<Remote Port>,<Interval Time>[,<Interfaces>]]]
+Mode         : 0  Disable
+               1  Enable
+NMS Server/IP: 1 to 63 characters
+Remote Port  : 0 to 65535
+Interval Time: 0 to 65535 seconds
+Interfaces   : 0  Disable; 1  Enable
+   0 / 1 : Ethernet
+   0 / 1 : Carrier
+   0 / 1 : Network
+OK
+TestDevice> AT+MANMSR=          
+
+TestDevice> AT+MANMSSRV?
++MANMSSRV:
+  Server   : nms.microhardcorp.com
+  Name     : default
+  Password : ********
+OK
+TestDevice> AT+MANMSSRV=?
+Command Syntax:AT+MANMSSRV[=<Server>,<Name>,<Password>,<Confirm Password>]
+<Server>: 
+  NMS Server/IP. 1 to 63 characters
+<Name>:
+  Domain Name. 1 to 63 characters
+<Password>:
+  Domain Password. 5 to 64 characters
+<Confirm Password>:
+  Same as <Password>. 5 to 64 characters
+OK
+TestDevice> AT+MANMSSRV=            
+
+TestDevice> AT+MAWSCLIENT?
++MAWSCLIENT:
+  Mode        : 0 - Disable
+OK
+TestDevice> AT+MAWSCLIENT=?
+Command Syntax:AT+MAWSCLIENT[=<Mode>[,<ServerType>,<Port>,<UserName>,<Password>,<Interval>]]
+<Mode>:
+  0 - Disable
+  1 - Enable
+<ServerType>: 
+  0 - https
+  1 - http
+<Port>: 
+  1 to 65535. Default is 9998
+<UserName>:
+  1 to 63 characters
+<Password>:
+  5 to 64 characters
+<Interval>:
+  In minute. 1 to 65535 minutes.
+OK
+TestDevice> AT+MAWSCLIENT=              
+
+TestDevice> AT+MAIOTSSL?
++MAIOTSSL:
+  Mode:Disable
+OK
+TestDevice> AT+MAIOTSSL=?
+Command Syntax:AT+MAIOTSSL[=<Mode>[,<Host>,<Port>,<Registration Code>]
+  <Mode>: 0 - Disable, 1 - Enable
+  <Host>: 2 - 255 characters
+  <Port>: 1 - 65535
+  <Registration Code>: 1 - 250 characters
+OK
+TestDevice> AT+MAIOTSSL=            
+
+TestDevice> AT+MADISS?
++MADISS:
+  Mode : 1 - Discoverable
+  Server port : 20097
+OK
+TestDevice> AT+MADISS=?
+Command Syntax:AT+MADISS[=<Mode>[,<Port>]]
+Mode:
+  0 - Disable
+  1 - Discoverable
+Port: 
+  1 to 65535. Default is 20097
+OK
+TestDevice> AT+MADISS=          
+
+TestDevice> AT+MASNMP?
++MASNMP:
+  Mode        : Disable
+OK
+TestDevice> AT+MASNMP=?
+Command Syntax:AT+MASNMP[=<Mode>[,<ROCommunity>,<RWCommunity>,<Port>,<Version>[,<Location>,<Contact>]]]
+<Mode>:
+  0 - Disable
+  1 - Enable
+<ROCommunity>: Read Only Community Name
+  1 to 32 characters
+<RWCommunity>: Read Write Community Name
+  1 to 32 characters
+<Port>: Listening Port 
+  1 to 65535. Default is 161
+<Version>: SNMP version
+  1 - Version 1
+  2 - Version 2
+  3 - Version 3 (Use AT+MASNMPV3 to set Authentication and Privacy parameters)
+<Location>: System Location. 1 to 64 characters
+<Contact>: System Contact. 1 to 64 characters
+OK
+TestDevice> AT+MASNMP=          
+
+TestDevice> AT+MASNMPV3?
++MASNMPV3:
+  UserName        : userV3
+  RWLimit         : Read Only
+  AuthLevel       : NoAuthNoPriv
+OK
+TestDevice> AT+MASNMPV3=?
+Command Syntax:AT+MASNMPV3=<UserName>,<RWLimit>,<AuthLevel>[,<Auth>,<AuthPassword>[,<Privacy>,<PrivacyPassword>]]
+<UserName>       : V3 User Name
+  1 to 32 characters
+<RWLimit>        : V3 User Read Write Limit
+  0 - Read Only
+  1 - Read Write
+<AuthLevel>      : V3 User Authentication Level
+  0 - NoAuthNoPriv
+  1 - AuthNoPriv
+  2 - AuthPriv
+<Auth>           : V3 Authentication Protocol
+  0 - MD5
+  1 - SHA
+<AuthPassword>   : V3 Authentication Password
+  8 to 64 characters
+<Privacy>        : V3 Privacy Protocol
+  0 - DES
+  1 - AES
+<PrivacyPassword>: V3 Privacy Password
+  8 to 64 characters
+Usage:
+  NoAuthNoPriv : AT+MASNMPV3=<UserName>,<RWLimit>,0
+  AuthNoPriv   : AT+MASNMPV3=<UserName>,<RWLimit>,1,<Auth>,<AuthPassword>
+  AuthPriv     : AT+MASNMPV3=<UserName>,<RWLimit>,2,<Auth>,<AuthPassword>,<Privacy>,<PrivacyPassword>
+OK
+TestDevice> AT+MASNMPV3=            
+
+TestDevice> AT+MASNMPTRAP?
++MASNMPTRAP:
+  Mode             : 0 - Disable
+OK
+TestDevice> AT+MASNMPTRAP=?
+Command Syntax:AT+MASNMPTRAP[=<Mode>[,<Name>,<IP>[,<AuthFailureTraps>]]
+<Mode>:
+  0 - Disable
+  1 - Enable
+<Name>: 
+  Trap Community Name. 1 to 32 characters
+<IP>: 
+  Trap Manage Host IP. Default 0.0.0.0 (Disable)
+<AuthFailureTraps>:
+  0 - Disable
+  1 - Enable
+Usage:
+  AT+MASNMPTRAP
+  AT+MASNMPTRAP=0
+  AT+MASNMPTRAP=1[,<Name>,<IP>[,<AuthFailureTraps>]]
+OK
+TestDevice> AT+MASNMPTRAP=              
+
+TestDevice> AT+MFGEN?
+        Remote Management     Remote Access      LAN Outgoing
+Carrier             Block             Allow             Allow
+OK
+TestDevice> AT+MFGEN=?
+Command Syntax:AT+MFGEN[=<WAN>[,<Remote Management>[,<Remote Access>[,<LAN Outgoing>]]
+Firewall General Configuration:
+Parameters
+ WAN Connection    : 0 - Carrier
+ Remote Management : 0 - Block
+                     1 - Allow
+ Remote Access     : 0 - Block
+                     1 - Allow
+ LAN Outgoing      : 0 - Block
+                     1 - Allow
+OK
+TestDevice> AT+MFGEN=         
+
+TestDevice> AT+MFGENX?
+ Anti-Spoof           : Disable
+ Packet Normalization : Disable
+OK
+TestDevice> AT+MFGENX=?
+Command Syntax:AT+MFGENX[=<Config>[,<Mode>]]
+Firewall General Configuration: 
+Parameters
+ Config : 0 - Anti-Spoof
+          1 - Packet Normalization
+ Mode   : 0 - Disable
+          1 - Enable
+OK
+TestDevice> AT+MFGENX=          
+
+TestDevice> AT+MFDMZ?
+DMZ Source      : Carrier
+ DMZ Mode       : Disable
+ DMZ Server IP  : 192.168.168.100
+ Exception Port : 80,443,22
+ Source NAT     : no
+OK
+TestDevice> AT+MFDMZ=?
+Command Syntax: 
+ AT+MFDMZ[=<WAN>[,<DMZ Mode>[,<DMZ Server IP>,<Exception Port>,<SNAT>]]]
+Parameters:
+ WAN            : 0 - Carrier
+ DMZ Mode       : 0 - Disable
+                  1 - Enable
+ DMZ Server IP  : Valid IP address
+ Exception Port : 0 - 65535
+ Source NAT     : 0 - no; 1 - yes
+OK
+TestDevice> AT+MFDMZ=         
+
+TestDevice> AT+MFPORTFWD?
+ERROR: No firewall port forwarding rules
+TestDevice> AT+MFPORTFWD=?
+Command Syntax:
+ AT+MFPORTFWD[=<Name>[,<Operation>[,<Source>,<Internal IP>,<Internal Port>,<Protocol>,<External Port>,<SNAT>]]]
+Parameters:
+ Name          : Name of Port Forwarding rule, 1 - 64 characters
+ Operation     : ADD  - Add a rule
+                 EDIT - Edit a rule
+                 DEL  - Delete a rule
+ Source        : 0 - WIFI
+                 1 - Carrier
+                 2 - OpenVPN
+ Internal IP   : Valid IP address
+ Internal Port : Valid port number, 0 - 65535. 0 - Reset
+ Protocol      : 0 - TCP
+                 1 - UDP
+                 2 - TCPUDP
+ External Port : Valid port number, 1 - 65535
+ Source NAT    : 0 - No; 1 - Yes
+Usage:
+ AT+MFPORTFWD
+ AT+MFPORTFWD=<Name>
+ AT+MFPORTFWD=<Name>,DEL
+ AT+MFPORTFWD=<Name>,ADD,<Source>,<Internal IP>,<Internal Port>,<Protocol>,<External Port>,<SNAT>
+ AT+MFPORTFWD=<Name>,EDIT,<Source>,<Internal IP>,<Internal Port>,<Protocol>,<External Port>,<SNAT>
+OK
+TestDevice> AT+MFPORTFWD=             
+
+TestDevice> AT+MFMAC?
+ERROR: No firewall MAC list
+TestDevice> AT+MFMAC=?
+Command Syntax:
+ AT+MFMAC[=<Name>[,<Operation>[,<Action>,<Mac Address>]]]
+Parameters:
+ Name        : Name of firewall MAC list name, 1 - 64 characters
+ Operation   : ADD  - Add a firewall MAC list
+               EDIT - Edit a firewall MAC list
+               DEL  - Delete a firewall MAC list
+ Action      : 0 - Accept
+               1 - Drop
+               2 - Reject
+ MAC Address : Valid MAC address
+Usage:
+ AT+MFMAC
+ AT+MFMAC=<Name>
+ AT+MFMAC=<Name>,DEL
+ AT+MFMAC=<Name>,ADD,<Action>,<Mac Address>
+ AT+MFMAC=<Name>,EDIT,<Action>,<Mac Address>
+OK
+TestDevice> AT+MFMAC=         
+
+TestDevice> AT+MFIP?
+ERROR: No firewall IP list
+TestDevice> AT+MFIP=?
+Command Syntax:
+ AT+MFIP[=<Name>[,<Operation>[,<Action>,<Source>,<IP Address>[,<Prefix>]]]]
+Parameters:
+ Name      : Name of firewall IP list name, 1 - 64 characters
+ Operation : ADD  - Add a firewall IP list
+             EDIT - Edit a firewall IP list
+             DEL  - Delete a firewall IP list
+ Action    : 0 - Accept
+             1 - Drop
+             2 - Reject
+ Source    : 0 - LAN
+             1 - WIFI
+             2 - Carrier
+             3 - OpenVPN
+ Source IP : Valid IP address
+ Prefix    : 0 ~ 32. 32 (default) - single IP address
+Usage:
+ AT+MFIP
+ AT+MFIP=<Name>
+ AT+MFIP=<Name>,DEL
+ AT+MFIP=<Name>,ADD,<Action>,<Source>,<IP Address>[,<Prefix>]
+ AT+MFIP=<Name>,EDIT,<Action>,<Source>,<IP Address>[,<Prefix>]
+OK
+TestDevice> AT+MFIP=        
+
+TestDevice> AT+MFRULE?
+ERROR: No firewall rules
+TestDevice> AT+MFRULE=?
+Command Syntax:
+ AT+MFRULE[=<Name>[,<Operation>[,<Type>,<Action>,
+            <Source>,<Src IP Format>,<Src IP From/Subnet>,<Src IP To/Prefix>,
+            <Destination>,<Dest IP Format>,<Dest IP From/Subnet>,<Dest IP To/Prefix>,
+            <Dest Port>,<Protocol>]]]
+Parameters:
+ Name           : Name of firewall rule name, 1 - 64 characters
+ Operation      : ADD  - Add a firewall rule
+                  EDIT - Edit a firewall rule
+                  DEL  - Delete a firewall rule
+ Type           : 0 - Input
+                  1 - Output
+                  2 - Forward
+ Action         : 0 - Accept
+                  1 - Drop
+                  2 - Reject
+ Source         : (Must be "Any", if Type is Output)
+                  0 - LAN
+                  1 - WIFI
+                  2 - Carrier
+                  3 - OpenVPN
+                  4 - Any
+  IP Format     : 0 - IP Range
+                  1 - Subnet / Prefix
+  IP From/Subnet: Valid IP address
+  IP To/Prefix  : Valid IP address or 0 ~ 32 for Prefix
+ Destination    : (Must be "Any", if Type is Input)
+                  0 - LAN
+                  1 - WIFI
+                  2 - Carrier
+                  3 - OpenVPN
+                  4 - Any
+  IP Format     : 0 - IP Range
+                  1 - Subnet / Prefix
+  IP From/Subnet: Valid IP address
+  IP To/Prefix  : Valid IP address or 0 ~ 32 for Prefix
+  Port/Range    : Port 1 ~ 65535 or Port range specified as 100:200 format
+ Protocol       : 0 - TCP
+                  1 - UDP
+                  2 - TCPUDP
+                  3 - ICMP
+                  4 - Protocol 41
+                  5 - GRE
+                  6 - ALL
+OK
+TestDevice> AT+MFRULE=          
+
+TestDevice> AT+MFRST?
+ERROR: Invalid parameters
+TestDevice> AT+MFRST=?
+Command Syntax:AT+MFRST
+OK
+TestDevice> AT+MFRST=         
+
+TestDevice> AT+MMIMEI?
+IMEI=866834047070722
+OK
+TestDevice> AT+MMIMEI=?
+Command Syntax:AT+MMIMEI
+OK
+TestDevice> AT+MMIMEI=          
+
+TestDevice> AT+MMIMSI?
+IMSI=311480965989712
+OK
+TestDevice> AT+MMIMSI=?
+Command Syntax:AT+MMIMSI
+OK
+TestDevice> AT+MMIMSI=          
+
+TestDevice> AT+MMNETRSSI?
+RSSI=-67
+OK
+TestDevice> AT+MMNETRSSI=?
+Command Syntax:AT+MMNETRSSI
+OK
+TestDevice> AT+MMNETRSSI=             
+
+TestDevice> AT+MMBOARDTEMP?
+35.00
+OK
+TestDevice> AT+MMBOARDTEMP=?
+Command Syntax:AT+MMBOARDTEMP
+OK
+TestDevice> AT+MMBOARDTEMP=               
+
+TestDevice> AT+MMWANIP?
+WANIP=N/A
+OK
+TestDevice> AT+MMWANIP=?
+Command Syntax:AT+MMWANIP
+OK
+TestDevice> AT+MMWANIP=           
+
+TestDevice> AT+MMNUM?
+PHONENUM=+12817269648
+OK
+TestDevice> AT+MMNUM=?
+Command Syntax:AT+MMNUM
+OK
+TestDevice> AT+MMNUM=         
+
+TestDevice> AT+MMIMI?
+IMEI=866834047070722
+IMSI=311480965989712
+OK
+TestDevice> AT+MMIMI=?
+Command Syntax:AT+MMIMI
+OK
+TestDevice> AT+MMIMI=         
+
+TestDevice> AT+MMCID?
+SIMID=89148000004995395830
+OK
+TestDevice> AT+MMCID=?
+Command Syntax:AT+MMCID
+OK
+TestDevice> AT+MMCID=         
+
+TestDevice> AT+MMPIPP?
+  Mode       : 0  Disable
+OK
+TestDevice> AT+MMPIPP=?
+Command Syntax:
+  AT+MMPIPP[=<Mode>[,<Lease Time>,<IP Address>]]
+Parameters:
+  Mode       : 0  Disable
+               1  Ethernet
+  Lease Time : IP-Passthrough DHCP lease time, 2 to 2880, in minutes
+  IP Address : A virtual IP address set to LAN in ippassthrough Ethernet mode
+OK
+TestDevice> AT+MMPIPP=          
+
+TestDevice> AT+MMAPN?
+APN=auto
+OK
+TestDevice> AT+MMAPN=?
+Command Syntax:AT+MMAPN[=<Index>[,<APN>]]
+<Index> : SIM Card No.
+          1 - SIM Card 1
+<APN>   : Max 255 characters
+OK
+TestDevice> AT+MMAPN=         
+
+TestDevice> AT+MMPOWERIN?
+Unknown
+OK
+TestDevice> AT+MMPOWERIN=?
+Command Syntax:AT+MMPOWERIN
+OK
+TestDevice> AT+MMPOWERIN=             
+
+TestDevice> AT+MMTYPE?
+SIM Card No.1 : SIM Type - Auto Detect
+
+OK
+TestDevice> AT+MMTYPE=?
+Command Syntax:AT+MMTYPE[=<Index>[,<SIM Type>]]
+<Index>      :   0 - SIM Card 1  
+<SIM Type>   :   0 : Auto Detect   1 : General/ATT Mode   2 : Verizon Mode
+OK
+TestDevice> AT+MMTYPE=          
+
+TestDevice> AT+MNLAN?
+1. LAN Configuration
+ IP Address             : 192.168.168.1 (static)
+ Subnet Mask            : 255.255.255.0 (static)
+ LAN Alias              : no
+ Spanning Tree (STP)    : off
+ IGMP Snooping          : on
+ DNS Server Mode        : manual
+   Primary DNS          : 
+   Secondary DNS        : 
+ DHCP Server            : Enabled
+   Start IP             : 192.168.168.100
+   Limit                : 150
+   Lease Time           : 720
+   Alternate Gateway    : 
+   Preferred DNS server : 
+   Alternate DNS server : 
+   WINS/NBNS Servers    : 
+   WINS/NBT Node Type   : 
+OK
+TestDevice> AT+MNLAN=?
+Command Syntax:
+ AT+MNLAN
+ AT+MNLAN=<LAN Name>
+ AT+MNLAN=<LAN Name>,DEL
+ AT+MNLAN=<LAN Name>,ADD/EDIT,<Protocol>[,<IP>,<Netmask>[,<Gateway>]] Where <Protocol>=0
+ AT+MNLAN=<LAN Name>,ADD/EDIT,<Protocol>                          Where <Protocol>=1 or 3
+ AT+MNLAN=<LAN Name>,ADD/EDIT,<Protocol>,<IP>,<Netmask>               Where <Protocol>=2
+Parameters:
+ LAN Name     : Case Sensitive LAN interface name
+                The reserved "lan" and "LAN" specify the same LAN port
+ Operation    : ADD  - Add a new LAN interface
+                EDIT - Edit an exsiting LAN interface
+                DEL  - Delete an existing LAN interface
+ Protocol     : 0 - Static IP
+                1 - DHCP
+                2 - Alias
+                3 - NONE
+ Defaut Route : 0 - No, 1 - Yes
+ IP Address   : Valid IP address
+ Netmask      : Valid netmask
+ Gateway      : Valid IP address. 0 - Reset
+OK
+TestDevice> AT+MNLAN=         
+
+TestDevice> AT+MNLANDHCP?
+ERROR: Missed <LAN Name> parameter
+TestDevice> AT+MNLANDHCP=?
+Command Syntax: 
+  AT+MNLANDHCP=<LAN Name>[,<Mode>[,<Start IP>,<Limit>,<Lease Time>[,<Alt. Gateway>,
+               <Pre. DNS>,<Alt. DNS>,<WINS/NBNS Servers>,<WINS/NBT Node>]]]
+Parameters:
+  LAN Name      : Name of Network LAN interface
+  Mode          : 0 - Disable DHCP Server
+                  1 - Enable  DHCP Server
+  Start IP      : The starting address DHCP assignable IP Addresses
+  Limit         : The maximum number of IP addresses
+  Lease Time    : The DHCP lease time in minutes. 2~2147483647 minutes. 0 means 'infinity'
+  Alt. Gateway  : Alternate Gateway for DHCP assigned devices if the default gateway is not to be used
+  Pre. DNS      : Preferred DNS server address to be assigned to DHCP devices
+  Alt. DNS      : Alternate DNS server address to be assigned to DHCP devices
+  WINS/NBNS Server : WINS/NBNS Servers
+  WINS/NBT Node : WINS/NBT Node Type
+                  0 - none
+                  1 - b-node
+                  2 - p-node
+                  3 - m-node
+                  4 - h-node
+OK
+TestDevice> AT+MNLANDHCP=             
+
+TestDevice> AT+MNLANSTP?
+ERROR: Missed <LAN Name> parameter
+TestDevice> AT+MNLANSTP=?
+Command Syntax: 
+  AT+MNLANSTP=<LAN Name>[,<STP>]
+Parameters:
+  LAN Name      : Name of Network LAN interface
+  Spanning Tree : 0 - Off
+                  1 - On
+OK
+TestDevice> AT+MNLANSTP=            
+
+TestDevice> AT+MNLANIGMP?
+ERROR: Missed <LAN Name> parameter
+TestDevice> AT+MNLANIGMP=?
+Command Syntax: 
+  AT+MNLANIGMP=<LAN Name>[,<IGMP Snooping>]
+Parameters:
+  LAN Name      : Name of Network LAN interface
+  IGMP Snooping : 0 - Off
+                  1 - On
+OK
+TestDevice> AT+MNLANIGMP=             
+
+TestDevice> AT+MNLANDNS?
+ERROR: Missed <LAN Name> parameter
+TestDevice> AT+MNLANDNS=?
+Command Syntax: 
+ AT+MNLANDNS=<LAN Name>[,<Mode>[,<Primary DNS>,<Secondary DNS>]]
+Usage:
+ AT+MNLANDNS=<LAN Name>
+ AT+MNLANDNS=<LAN Name>,<Mode>                                 Where <Mode>=0
+ AT+MNLANDNS=<LAN Name>,<Mode>[,<Primary DNS>,<Secondary DNS>] Where <Mode>=1
+Parameters:
+ LAN Name      : Name of Network LAN interface
+ Mode          : 0 - Auto
+                 1 - Manual
+ Primary DNS   : Valid IP Address or 0 (Reset)
+ Secondary DNS : Valid IP address or 0 (Reset)
+OK
+TestDevice> AT+MNLANDNS=            
+
+TestDevice> AT+MNLANDR?
+ERROR: Missed <LAN Name> parameter
+TestDevice> AT+MNLANDR=?
+Command Syntax: 
+  AT+MNLANDR=<LAN Name>[,<Default Route>]
+Parameters:
+  LAN Name      : Name of Network LAN interface
+  Default Route : 0 - No
+                  1 - Yes
+OK
+TestDevice> AT+MNLANDR=           
+
+TestDevice> AT+MNIPMAC?
+Static Addresses:
+  N/A
+Active DHCP Leases:
+  EC:8E:B5:49:F4:12 192.168.168.126 DESKTOP-4JFU4LH (Expires in 11hr 51min 19sec)
+OK
+TestDevice> AT+MNIPMAC=?
+Command Syntax:
+  AT+MNIPMAC[=<Operation>[,<Name>[,<IP Address>,<MAC Address>]]]
+Usage: 
+  AT+MNIPMAC
+  AT+MNIPMAC=SHOW,<Name>
+  AT+MNIPMAC=ADD,<Name>,<IP Address>,<MAC Address>
+  AT+MNIPMAC=DEL,<NAME>
+  AT+MNIPMAC=RELEASE,<NAME>
+  AT+MNIPMAC=RELEASEALL
+Parameters:
+  Operation  : SHOW - Static/Active MAC-IP address binding
+               ADD  - Static MAC-IP address binding
+               DEL  - Static MAC-IP address binding
+               RELEASE - Active DHCP lease
+               RELEASEALL - All active DHCP leases
+  Name       : Name of the MAC-IP binding, 1-64 characters
+  IP Address : Valid IP address
+  MAC Address: The physical MAC address of the device or interface
+OK
+TestDevice> AT+MNIPMAC=           
+
+TestDevice> AT+MNEMAC?
++MNEMAC: "00:0F:92:0C:A1:81"
+OK
+TestDevice> AT+MNEMAC=?
+Command Syntax:AT+MNEMAC
+OK
+TestDevice> AT+MNEMAC=          
+
+TestDevice> AT+MNPORT?
+0: LAN: Mode: auto
+OK
+TestDevice> AT+MNPORT=?
+Command Syntax: 
+  AT+MNPORT[=<Ethernet Port>[,<Mode>[,<Auto Negotiation>,<Speed>,<Duplex>]]]
+Parameters:
+  Ethernet Port    : 0 - LAN
+  Mode             : 0 - Auto
+                     1 - Manual
+  Auto-Negotiation : 0 - Off
+                   : 1 - On
+  Speed            : 0 - 10 Mbit/s
+                     1 - 100 Mbit/s
+  Duplex           : 0 - Full
+                     1 - Half
+OK
+TestDevice> AT+MNPORT=          
+
+TestDevice> AT+MNSTATUS?
+LAN:
+  MAC Address       : 00:0F:92:0C:A1:81
+  IP Address        : 192.168.168.1
+  Subnet Mask       : 255.255.255.0
+  Receive bytes     : 207.190KB
+  Receive packets   : 2382 
+  Transmit bytes    : 363.695KB
+  Transmit packets  : 3448 
+Default Gateway     :None
+DNS Server(s)       :None
+Load Balancer Status
+  WIFI        Network path is down       0%
+
+
+Kernel IP routing table
+Subnet Mask     Flags Metric Ref    Use Iface
+192.168.168.0   0.0.0.0         255.255.255.0   U     0      0        0 br-lan
+OK
+TestDevice> AT+MNSTATUS=?
+Command Syntax:AT+MNSTATUS
+OK
+TestDevice> AT+MNSTATUS=            
+
+TestDevice> AT+MNDDNSE?
++MNDDNSE: Mode 0 
+OK
+TestDevice> AT+MNDDNSE=?
+Command Syntax:
+  AT+MNDDNSE=<Mode>
+Parameter:
+  Mode: 0 - Disable
+        1 - Enable
+OK
+TestDevice> AT+MNDDNSE=           
+
+TestDevice> AT+MNDDNS?
++MNDDNS:
+ Network         : 0 - Auto
+ User Name       :  
+ Password        :  
+ Host            :  
+OK
+TestDevice> AT+MNDDNS=?
+Command Syntax:
+  AT+MNDDNS=<Network>,<Periodic Update>,<Service>,<User Name>,<Password>,<Host> or <Record Number>[,<Url>]
+Parameters:
+  Network         : 0 - Auto
+                    1 - Carrier
+  Periodic Update : 0 - Disable
+                    1 - 5 minutes
+                    2 - 15 minutes
+                    3 - 60 minutes
+                    4 - 4 hours
+                    5 - 8 hours
+                    6 - 24 hours
+  Service Type    : 0 - changeip
+                    1 - dyndns
+                    2 - eurodyndns
+                    3 - hn
+                    4 - noip
+                    5 - ods
+                    6 - ovh
+                    7 - regfish
+                    8 - tzo
+                    9 - zoneedit
+                    10 - customized_ddns
+                    11 - DNSmadeEasy
+  User Name       : 1 - 64 characters
+  Password        : 1 - 64 characters
+  Host            : 1 - 200 characters, for any services except DNSmadeEasy
+  Record Number   : 1 - 200 characters, for DNSmadeEasy only
+  Url             : 1 - 200 characters, for customized_ddns
+OK
+TestDevice> AT+MNDDNS=          
+
+TestDevice> AT+MNOPENDNS?
+OpenDNS Cloud Filter     : Disable
+OK
+TestDevice> AT+MNOPENDNS=?
+Command Syntax:
+  AT+MMOPENDNS[=<Mode>[, <Forbid Bypassing OpenDNS>, <Dynamic IP>, [ <Domain>, <User Name>, <Password>]]]
+Parameters:
+<Mode>        : 0 - Disbale, 1 - Enable
+<Forbid Bypassing OpenDNS>  : 0 - No, 1 - Yes
+<Dynamic IP>  : 0 - No, 1 - Yes
+<Domain>      : 1 to 64 characters
+<User Name>   : 1 to 64 characters
+<Password>    : 5 to 64 characters
+OK
+TestDevice> AT+MNOPENDNS=             
+
+TestDevice> AT+MNDHCPREBIND?
+ Enable
+OK
+TestDevice> AT+MNDHCPREBIND=?
+Command Syntax:
+  AT+MNDHCPREBIND[=<Rebind Protectio>]
+  Rebind Protection : 0 - Disable, 1 - Enable
+OK
+TestDevice> AT+MNDHCPREBIND=                
+
+TestDevice> AT+MNNETSP?
+  Netperf Server Address : netperf-west.bufferbloat.net
+  Netperf Server Port    : 12865
+  Duration               : 30
+OK
+TestDevice> AT+MNNETSP=?
+Command Syntax:
+ AT+MNNETSP[=<Netperf Server>[,<Duration(seconds)>]
+ AT+MNNETSP[=4,<Netperf Server Address>[,<Netperf Server Port>,<Duration(seconds)>]
+Parameters:
+ <NETPERF Server> : 0 - netperf.bufferbloat.net 
+                    1 - netperf-east.bufferbloat.net 
+                    2 - netperf-west.bufferbloat.net 
+                    3 - netperf-eu.bufferbloat.net 
+                    4 - customerserver 
+ <Duration>       : 1-60 
+ <Netperf Server Address>    : customer netperf server address 
+ <Netperf Server Port>       : 0-65535 
+OK
+
+TestDevice> AT+MNNETSP=           
+
+TestDevice> AT+MNPINGTM?
+  Ping Server Address : 8.8.8.8
+OK
+TestDevice> AT+MNPINGTM=?
+Command Syntax:
+ AT+MNPINGTM[=<Ping Server>[,<Ping Count>[,<Ping Size>]]]
+Parameters:
+ <Ping Server> : Valid IP Address 
+ <Ping Count>  : > 0, integer count 
+ <Ping Size>   : 5-15000 
+OK
+
+TestDevice> AT+MNPINGTM=            
+
+TestDevice> AT+MNMWAN3?
+Carrier Settings:
+  Include Carrier in LoadBalance : No
+  Remote Check IPs       : 208.67.220.220 208.67.222.222
+  Check Interval Timer   : 5
+  Counter for UP State   : 8
+  Counter for DOWN State : 3
+  Failover Priority      : 10
+  Weight of the channel  : 2
+WIFI Settings: 
+  Include WIFI in LoadBalance : Yes
+  Remote Check IPs       : 208.67.220.220 208.67.222.222
+  Check Interval Timer   : 5
+  Counter for UP State   : 8
+  Counter for DOWN State : 3
+  Failover Priority      : 10
+  Weight of the channel  : 2
+OK
+TestDevice> AT+MNMWAN3=?
+Command Syntax:
+ AT+MNMWAN3[=<WAN Name>[,<Status>[,<Remote Check IP1>, <Remote Check IP2>, <Interval>, <Up>, <Down>, <Priority>, <Weight>]]]
+Parameters :
+ <WAN Name> : 0 - Carrier, 1 - WIFI
+ <Status>   : 0 - Disabled, 1 - Enabled
+ <Remote Check IP1> : Valid IP Address 
+ <Remote Check IP2> : Valid IP Address 
+ <Interval> : 5-600 
+ <Up>       : 2-100 
+ <Down>     : 2-100 
+ <Priority> : 1-10 
+ <Weight>   : 1-100 
+OK
+TestDevice> AT+MNMWAN3=           
+
+TestDevice> AT+MNMWAN3STA?
++MCCPS: Enable
+OK
+TestDevice> AT+MNMWAN3STA=?
+Command Syntax:
+  AT+MNMWAN3STA=<Mode>
+Parameters:
+  Mode:
+    0 - Disable
+    1 - Enable
+OK
+TestDevice> AT+MNMWAN3STA=              
+
+TestDevice> AT+MNMWAN3INFSTA?
+ Interface      Interface Status    Balance Status
+ WIFI            false                 0%
+OK
+TestDevice> AT+MNMWAN3INFSTA=?
+Command Syntax:AT+MNMWAN3INFSTA
+OK
+TestDevice> AT+MNMWAN3INFSTA=                 
+
+TestDevice> AT+MSCNTO?
++MSCNTO: 120 seconds
+OK
+TestDevice> AT+MSCNTO=?
++MSCNTO:
+Command Syntax:
+  AT+MSCNTO=<Timeout_s>
+Parameter:
+  <Timeout_s> : 30 to 65535 in seconds, 0-Disable
+OK
+TestDevice> AT+MSCNTO=          
+
+TestDevice> AT+MSPWD?
+ERROR: Invalid parameter(s)
+TestDevice> AT+MSPWD=?
++MSPWD:
+Command Syntax:
+  AT+MSPWD=<New Password>,<Confirm Password>
+Parameters:
+  <New Password>     : 5-64 characters except space
+  <Confirm Password> : Same as <New Password>
+OK
+TestDevice> AT+MSPWD=         
+
+TestDevice> AT+MSGMI?
++MSGMI: 2020-2022 Microhard Systems Inc.
+OK
+TestDevice> AT+MSGMI=?
+Command Syntax:AT+MSGMI
+OK
+TestDevice> AT+MSGMI=         
+
+TestDevice> AT+MSSYSI?
+System:
+  Host Name   : TestDevice
+  Product     : LTECUBECAT4
+  Hardware    : 2.0
+  Software    : v1.3.5 build 1024
+  Copyright   : 2020-2022 Microhard Systems Inc.
+  System Time : Wed Sep 21 23:43:18 2022
+  Temperature : 36.00 C
+  Voltage     : Unknown V
+Carrier:
+  Module      : Enabled
+  IMEI        : 866834047070722
+  SIMID       : 89148000004995395830
+  Status(APN) : Disconnected(vzwinternet)
+  Network     : N/A
+  IP          : N/A
+  RSSI        : -67
+LAN:
+  MAC         : 00:0F:92:0C:A1:81
+  IP          : 192.168.168.1 (static)
+  MASK        : 255.255.255.0 (static)
+OK
+TestDevice> AT+MSSYSI=?
+Command Syntax:AT+MSSYSI
+OK
+TestDevice> AT+MSSYSI=          
+
+TestDevice> AT+MSGMR?
++MSGMR:
+ Hardware Version : 2.0
+ Software Version : v1.3.5 build 1024
+ Copyright        : 2020-2022 Microhard Systems Inc.
+ System Time      : Wed Sep 21 23:43:19 2022
+OK
+TestDevice> AT+MSGMR=?
+Command Syntax:AT+MSGMR
+OK
+TestDevice> AT+MSGMR=         
+
+TestDevice> AT+MSIMG?
+ Active Version      : v1.3.5-r1024
+ Active Build Time   : 2022-08-31 10:25:30
+ Inactive Version    : v1.3.5-r1024
+ Inactive Build Time : 2022-08-31 10:25:30
+OK
+TestDevice> AT+MSIMG=?
+Command Syntax:AT+MSIMG
+OK
+TestDevice> AT+MSIMG=         
+
+TestDevice> AT+MSMNAME?
+Host name:TestDevice 
+OK
+TestDevice> AT+MSMNAME=?
++MSMNAME:
+Command Syntax:
+  AT+MSMNAME=<Modem_Name>
+Parameter:
+  <Modem_Name> : 1 - 64 characters. Must be alphanumeric, dashes(-) or underscores(_)
+OK
+TestDevice> AT+MSMNAME=           
+
+TestDevice> AT+MSRTF?
+ERROR: Invalid parameter(s)
+TestDevice> AT+MSRTF=?
++MSRTF:
+Command Syntax:
+  AT+MSRTF=<Action>
+Parameter:
+  <Action>: 0 - Pre-set action
+            1 - Confirm action
+OK
+TestDevice> AT+MSRTF=         
+
+TestDevice> AT+MSREB?
+ERROR: Invalid parameter(s)
+TestDevice> AT+MSREB=?
++MSREB: Command Syntax:AT+MSREB
+OK
+TestDevice> AT+MSREB=         
+
+TestDevice> AT+MSNTP?
++MSNTP: 
+  Mode                     : 0 - Local Time
+  Server                   : pool.ntp.org
+  Client Interval          : 3600
+  Current Date(yyyy-mm-dd) : 2022-09-21
+  Current Time(hh:mm:ss)   : 23:43:19
+OK
+TestDevice> AT+MSNTP=?
++MSNTP:
+Command Syntax:
+  AT+MSNTP=<Mode>[,<Date>,<Time>,<Server>,<Client Interval>]
+  AT+MSNTP=<Mode>[,<Server>,<Client Interval>]
+Parameters:
+  <Mode>                  : 0 - Local Time; 1 - NTP
+    <Mode=0>
+        <Date>            : yyyy-mm-dd
+        <Time>            : hh:mm:ss
+    <Mode=0 or 1>
+        <Server>          : Valid IP Address or Name
+        <Client Interval> : 15 to 8640000 in seconds, 0-Disable
+OK
+TestDevice> AT+MSNTP=         
+
+TestDevice> AT+MSNTPSVR?
++MSNTPSVR:
+  Local NTP Server         : Disable
+OK
+TestDevice> AT+MSNTPSVR=?
++MSNTPSVR:
+Command Syntax:
+  AT+MSNTPSVR=<Mode>
+Parameters:
+  <Mode> : 0 - Disable ; 1 - Enable
+OK
+TestDevice> AT+MSNTPSVR=            
+
+TestDevice> AT+MSKA?
+  Mode           : 1 - Enable
+  Traffic Check  : 0 - Disable
+  CLI Activity   : 0 - Disable
+  Web UI Activity: 0 - Disable
+OK
+TestDevice> AT+MSKA=?
+Command Syntax:
+  AT+MSKA[=<Mode>[,<Traffic Check>,<CLI Activity>,<Web UI Activity>]]
+Parameters:
+  Mode           : 0 - Disable
+                   1 - Enable
+  Traffic Check  : 0 - Disable
+                   1 - Enable
+  CLI Activity   : 0 - Disable
+                   1 - Enable
+  Web UI Activity: 0 - Disable
+                   1 - Enable
+OK
+TestDevice> AT+MSKA=        
+
+TestDevice> AT+MSKAS?
+  Type       : 0 - ICMP
+  Host Name  : 8.8.8.8 
+  Interval   : 300 
+  Retry      : 20 
+  HTTP Port  : 80 
+OK
+TestDevice> AT+MSKAS=?
+Command Syntax:
+  AT+MSKAS[=<Type>,<Host Name>,<Interval>,<Retry>[,<HTTP Port>]]
+Parameters:
+  Type       : 0 - ICMP
+               1 - HTTP
+               2 - DNS Lookup
+  Host Name  : Valid host name, 1 to 256 characters
+  Interval   : Keepalive Interval in second, 60 to 60000
+  Retry      : Keepalive Retry, 10 to 200
+  HTTP Port  : Valid HTTP Port, 1 to 65535
+OK
+TestDevice> AT+MSKAS=         
+
+TestDevice> AT+MSTR?
+LAN
+ RX packets: 2584
+ RX bytes  : 225927
+ TX packets: 3814
+ TX bytes  : 415376
+OK
+TestDevice> AT+MSTR=?
+Command Syntax:AT+MSTR[=<Interfaces>]
+<Interfaces> : 0 - LAN
+OK
+TestDevice> AT+MSTR=        
+
+TestDevice> AT+MSSYSLOG?
+  Syslog Server : 0.0.0.0
+  Syslog Port   : 514
+OK
+TestDevice> AT+MSSYSLOG=?
++MSSYSLOG:
+Command Syntax:
+  AT+MSSYSLOG[=<Server>[,<Port>]]
+Parameters:
+  <Server> : Valid IP Address or Name. 0.0.0.0 - Disable. 1 to 256 characters
+  <Port>   : 1 to 65535. Default is 514
+OK
+TestDevice> AT+MSSYSLOG=            
+
+TestDevice> AT+MSSERVICE?
+FTP    : Enable
+Telnet : Disable  Port: 23
+SSH    : Enable   Port: 22
+ Local tunneling: Block  
+ Remote Tunneling: Block  
+ Password Authentication: Allow   
+OK
+TestDevice> AT+MSSERVICE=?
++MSSERVICE:
+Command Syntax:
+  AT+MSSERVICE[=<Service>[,<Mode>[,<Port>[,<LocalTunneling>,<RemoteTunneling>,<PasswordAuth>]]]]
+Parameters:
+  <Service> : 0 - FTP
+              1 - Telnet
+              2 - SSH
+  <Mode>    : 0 - Disable; 1 - Enable
+  <Port>    : 1 to 65535. For Telnet (23 by default) and SSH (22 by default) only
+SSH Options:
+  <Local Tunneling> : 0 - Block; 1 - Allow
+  <Remote Tunneling> : 0 - Block; 1 - Allow
+  <Password Authentication> : 0 - Block; 1 - Allow
+Note        : Not require AT&W
+OK
+TestDevice> AT+MSSERVICE=             
+
+TestDevice> AT+MSWEBUI?
+Web UI : HTTP/HTTPS   Port : 80 HTTP / 443 HTTPS
+OK
+TestDevice> AT+MSWEBUI=?
++MSWEBUI:
+Command Syntax:
+  AT+MSWEBUI[=<Mode>[,<HTTP Port>][,<HTTPS Port>]]]
+Parameters:
+  <Mode>       : 0 - HTTP/HTTPS
+                 1 - HTTP
+                 2 - HTTPS
+                 3 - Disable
+  <HTTP Port>  : 1 to 65535. 80 by default
+  <HTTPS Port> : 1 to 65535. 443 by default
+Usages:
+  AT+MSWEBUI
+  AT+MSWEBUI=<Mode>[,<HTTP Port>,<HTTPS Port>] when <Mode>=0
+  AT+MSWEBUI=<Mode>[,<HTTP Port>]              when <Mode>=1
+  AT+MSWEBUI=<Mode>[,<HTTPS Port>]             when <Mode>=2
+  AT+MSWEBUI=<Mode>                            when <Mode>=3
+Note        : Not require AT&W
+OK
+TestDevice> AT+MSWEBUI=           
+
+TestDevice> AT+MSAUTH?
++MGPSNMEA:
+ Web Service     : Local Only
+ Telnet & Console: Local Only
+ SSH             : Local Only
+OK
+TestDevice> AT+MSAUTH=?
+Command Syntax:AT+MSAUTH=[<Service>[,<Auth Method>,[<Server1>,<Port1>,<Secret1>[,<Server2>,<Port2>,<Secret2>]]]]
+Parameters:
+  <Service>     : 0 - Web Service, 1 - Telnet & Console, 2 - SSH
+  <Auth Method> : 0 - Local Only
+                  1 - Radius Or Local
+                  2 - Radius and Local
+                  3 - Radius Only
+  <Server1>     : Radius Server1
+  <Port1>       : Radius Server1 Port, 1 - 65535
+  <Secret1>     : Radius Server1 Secret
+  <Server2>     : Radius Server2
+  <Port2>       : Radius Server2 Port, 1 - 65535
+  <Secret2>     : Radius Server2 Secret
+OK
+TestDevice> AT+MSAUTH=          
+
+TestDevice> AT+MWRADIO?
++MWRADIO: 1 - On
+OK
+TestDevice> AT+MWRADIO=?
+Command Syntax:AT+MWRADIO[=<Radio>]
+<Radio>
+  0 - Off
+  1 - On
+OK
+TestDevice> AT+MWRADIO=           
+
+TestDevice> AT+MWMODE?
++MWMODE: 2 - 802.11NG
+OK
+TestDevice> AT+MWMODE=?
+Command Syntax:AT+MWMODE[=<Mode>]
+<Mode>
+  0 - 802.11B ONLY
+  1 - 802.11BG
+  2 - 802.11NG
+OK
+TestDevice> AT+MWMODE=          
+
+TestDevice> AT+MWDISTANCE?
++MWDISTANCE: 500 m
+OK
+TestDevice> AT+MWDISTANCE=?
+Command Syntax:AT+MWDISTANCE[=<Distance>]
+Distance : 100 - 30000 in meter
+OK
+TestDevice> AT+MWDISTANCE=              
+
+TestDevice> AT+MWTXPOWER?
++MWTXPOWER: 6 - 20 dbm
+OK
+TestDevice> AT+MWTXPOWER=?
+Command Syntax:AT+MWTXPOWER[=<Tx Power>]
+<Tx Power>
+   0 - 5 dbm
+   1 - 7 dbm
+   2 - 8 dbm
+   3 - 9 dbm
+   4 - 10 dbm
+   5 - 15 dbm
+   6 - 20 dbm
+   7 - 21 dbm
+   8 - 22 dbm
+   9 - 23 dbm
+  10 - 24 dbm
+  11 - 25 dbm
+  12 - 26 dbm
+  13 - 27 dbm
+  14 - 28 dbm
+  15 - 29 dbm
+  16 - 30 dbm
+OK
+TestDevice> AT+MWTXPOWER=             
+
+TestDevice> AT+MWCHAN?
++MWCHAN: 0 - Auto
+OK
+TestDevice> AT+MWCHAN=?
+Command Syntax:AT+MWCHAN[=<Channel>]
+Available radio channels for 802.11NG w/HT20  
+ 0 - Auto  
+ 1 - 2.412 GHz  
+ 2 - 2.417 GHz  
+ 3 - 2.422 GHz  
+ 4 - 2.427 GHz  
+ 5 - 2.432 GHz  
+ 6 - 2.437 GHz  
+ 7 - 2.442 GHz  
+ 8 - 2.447 GHz  
+ 9 - 2.452 GHz  
+10 - 2.457 GHz  
+11 - 2.462 GHz
+OK
+TestDevice> AT+MWCHAN=          
+
+TestDevice> AT+MWHTMODE?
++MWHTMODE: 0 - HT20
+OK
+TestDevice> AT+MWHTMODE=?
+Command Syntax:AT+MWHTMODE[=<High Throughput Mode>]
+<High Throughput Mode>
+  0 - HT20
+  1 - HT40-
+  2 - HT40+
+  3 - Force HT40-
+  4 - Force HT40+
+OK
+TestDevice> AT+MWHTMODE=            
+
+TestDevice> AT+MWMPDUAGG?
++MWMPDUAGG: 1 - Enable
+OK
+TestDevice> AT+MWMPDUAGG=?
+Command Syntax:AT+MWMPDUAGG[=<MPDU Aggregation>]
+<MPDU Aggregation>
+  0 - Disable
+  1 - Enable
+OK
+TestDevice> AT+MWMPDUAGG=             
+
+TestDevice> AT+MWSHORTGI?
++MWSHORTGI: 1 - Enable
+OK
+TestDevice> AT+MWSHORTGI=?
+Command Syntax:AT+MWSHORTGI[=<Short GI>]
+<Short GI>
+  0 - Disable
+  1 - Enable
+OK
+TestDevice> AT+MWSHORTGI=             
+
+TestDevice> AT+MWHTCAPAB?
++MWHTCAPAB: HT Capabilities Info - SHORT-GI-20 SHORT-GI-40 TX-STBC RX-STBC1 DSSS_CCK-40
+OK
+TestDevice> AT+MWHTCAPAB=?
+Command Syntax:AT+MWHTCAPAB
+OK
+TestDevice> AT+MWHTCAPAB=             
+
+TestDevice> AT+MWAMSDU?
++MWAMSDU: Maximum AMSDU (byte) - 3839
+
+OK
+TestDevice> AT+MWAMSDU=?
+Command Syntax:AT+MWAMSDU
+OK
+TestDevice> AT+MWAMSDU=           
+
+TestDevice> AT+MWAMPDU?
++MWAMPDU: Maximum AMPDU (byte) - 65535
+
+OK
+TestDevice> AT+MWAMPDU=?
+Command Syntax:AT+MWAMPDU
+OK
+TestDevice> AT+MWAMPDU=           
+
+TestDevice> AT+MWRTSTHRESH?
++MWRTSTHRESH: OFF
+OK
+TestDevice> AT+MWRTSTHRESH=?
+Command Syntax:AT+MWRTSTHRESH[=<RTS Threshold>]
+<RTS Threshold>:
+  0          OFF
+  256-2346   Enabled with the value
+OK
+TestDevice> AT+MWRTSTHRESH=               
+
+TestDevice> AT+MWFRAGTHRESH?
++MWFRAGTHRESH: Disabled
+OK
+TestDevice> AT+MWFRAGTHRESH=?
+Command Syntax:AT+MWFRAGTHRESH[=<Fragmentation Threshold>]
+<Fragmentation Threshold>:
+  0          Disabled
+  256-2346   Enabled with the value
+OK
+TestDevice> AT+MWFRAGTHRESH=                
+
+TestDevice> AT+MWMESHID?
+  Virtual Interface 0: 
+OK
+TestDevice> AT+MWMESHID=?
+Command Syntax:AT+MWMESHID[=<Index>[,<Mesh ID>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<Mesh ID>
+  Radio Virtual Interface Mesh ID: 1-64 characters
+OK
+TestDevice> AT+MWMESHID=            
+
+TestDevice> AT+MWMPATH?
++MWMPATH
+Virtual Interface 0 : Only supported under mesh mode
+OK
+TestDevice> AT+MWMPATH=?
+Command Syntax:AT+MWMPATH[=<Index>]
+<Index>
+  Radio Virtual Interface Index: 0-3
+OK
+TestDevice> AT+MWMPATH=           
+
+TestDevice> AT+MWIFACE?
+ERROR: Invalid parameters
+TestDevice> AT+MWIFACE=?
+Command Syntax: AT+MWIFACE=<Operation>[,<Index>]
+<Operation>
+  SHOW - List one or all radio virtual interface(s)
+  ADD - Add one radio virtual interface with default settings
+  DEL - Delete one radio virtual interface
+<Index>
+  Radio Virtual Interface Index: 0-3
+Usage:
+  AT+MWIFACE=SHOW[,<Index>]
+  AT+MWIFACE=ADD
+  AT+MWIFACE=DEL,<Index>
+OK
+TestDevice> AT+MWIFACE=           
+
+TestDevice> AT+MWNETWORK?
+  Virtual Interface 0: 0 - LAN
+OK
+TestDevice> AT+MWNETWORK=?
+Command Syntax:AT+MWNETWORK[=<Index>[,<Network>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<Network>
+  Radio Virtual Interface Network:
+    0 - LAN
+    1 - lan1
+    2 - WIFI
+OK
+TestDevice> AT+MWNETWORK=             
+
+TestDevice> AT+MWAWC?
+  Virtual Interface 0: 1 - Yes
+OK
+TestDevice> AT+MWAWC=?
+Command Syntax:AT+MWAWC[=<Index>[,<Access to Wired client>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<Access to Wired client>
+    0 - No
+    1 - Yes
+OK
+TestDevice> AT+MWAWC=         
+
+TestDevice> AT+MWSSID?
+  Virtual Interface 0: DoorsOfDurin
+OK
+TestDevice> AT+MWSSID=?
+Command Syntax:AT+MWSSID[=<Index>[,<SSID>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<SSID>
+  Radio Virtual Interface SSID: 1-32 characters
+OK
+TestDevice> AT+MWSSID=          
+
+TestDevice> AT+MWDEVICEMODE?
+  Virtual Interface 0: 1 - Client
+OK
+TestDevice> AT+MWDEVICEMODE=?
+Command Syntax:AT+MWDEVICEMODE[=<Index>[,<Device Mode>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<Device Mode>
+  Radio Virtual Interface Mode:
+    0 - Access Point
+    1 - Client
+    2 - Repeater
+    3 - Mesh
+OK
+TestDevice> AT+MWDEVICEMODE=                
+
+TestDevice> AT+MWRATE?
+  Virtual Interface 0: 0 - auto
+OK
+TestDevice> AT+MWRATE=?
+Command Syntax:AT+MWRATE[=<Index>[,<TX bitrate>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<TX bitrate>
+  Radio Virtual Interface TX bitrate for 802.11NG
+     0 - auto
+     1 - mcs-0
+     2 - mcs-1
+     3 - mcs-2
+     4 - mcs-3
+     5 - mcs-4
+     6 - mcs-5
+     7 - mcs-6
+     8 - mcs-7
+OK
+TestDevice> AT+MWRATE=          
+
+TestDevice> AT+MWWDS?
+  Virtual Interface 0: 1 - On
+OK
+TestDevice> AT+MWWDS=?
+Command Syntax:AT+MWWDS[=<Index>[,<WDS>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<WDS>
+    0 - Off
+    1 - On
+OK
+TestDevice> AT+MWWDS=         
+
+TestDevice> AT+MWSSIDBCAST?
+  Virtual Interface 0: 1 - On
+OK
+TestDevice> AT+MWSSIDBCAST=?
+Command Syntax:AT+MWSSIDBCAST[=<Index>[,<ESSID Broadcast>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<ESSID Broadcast>
+  Radio Virtual Interface ESSID Broadcast:
+    0 - Off
+    1 - On
+OK
+TestDevice> AT+MWSSIDBCAST=               
+
+TestDevice> AT+MWAPISOLATION?
+  Virtual Interface 0: 0 - Off
+OK
+TestDevice> AT+MWAPISOLATION=?
+Command Syntax:AT+MWAPISOLATION[=<Index>[,<AP Isolation>]]
+<Index>
+  Radio Virtual Interface Index: 0-3
+<AP Isolation>
+  Radio Virtual Interface AP Isolation:
+    0 - Off
+    1 - On
+OK
+TestDevice> AT+MWAPISOLATION=                 
+
+TestDevice> AT+MWENCRYPT?
+Virtual Interface [0]:
+  Encryption Type   : WPA2 (PSK)
+  Password          : speakFriendAndEnter
+OK
+TestDevice> AT+MWENCRYPT=?
+Command Syntax:
+ PSK:                    AT+MWENCRYPT[=<Index>[,<Encryption Type>[,<WPA PSK>]]]
+ RADIUS in Client:       AT+MWENCRYPT[=<Index>[,<Encryption Type>[,<RADIUS Password>,<RADIUS Identity>]]]
+ RADIUS in Access Point: AT+MWENCRYPT[=<Index>[,<Encryption Type>[,<RADIUS Server Key>,<RADIUS Server Address>,<RADIUS Port>
+                                     [,<Accounting Server Address>,<Accounting Server Port>,<Accounting Sever Secret>
+                                     [,<NAS Identitifier>]]]]]
+Parameters:
+ <Index>:           Radio Virtual Interface Index: 0-3
+ <Encryption Type>: 0 - Disabled
+                    1 - WPA (PSK)
+                    2 - WPA2 (PSK)
+                    3 - WPA+WPA2 (PSK)
+                    4 - WPA Enterprise (RADIUS)
+                    5 - WPA2 Enterprise (RADIUS)
+                    6 - WPA+WPA2 Enterprise (RADIUS)
+ <WPA PSK>:         8 ~ 63 characters
+ RADIUS Server for Access Point:
+  <Key>:            8 ~ 63 characters
+  <Address>:        Valid address
+  <Port>:           Valid port
+ Accounting Server for Access Point: 
+  <Address>:        Valid address
+  <Port>:           Valid port
+  <Secret>:         8 ~ 63 characters
+  <NAS ID> :        0 ~ 63 characters
+ RADIUS Server for Client:
+  <Identity>:       8 ~ 63 characters
+  <Password>:       8 ~ 63 characters
+Note: Mesh Point mode supports WPA2 (PSK) only
+OK
+TestDevice> AT+MWENCRYPT=             
+
+TestDevice> AT+MWRSSI?
+Radio1 Virtual Interface 1
+  0E:EA:C9:6D:2C:81  -42 dBm
+OK
+TestDevice> AT+MWRSSI=?
+Command Syntax:AT+MWRSSI
+OK
+TestDevice> AT+MWRSSI=          
+
+TestDevice> AT+MGPSSTA?
++MGPSSTA : Disable
+OK
+TestDevice> AT+MGPSSTA=?
+Command Syntax:AT+MGPSSTA[=<Mode>]
+Parameters:
+  Mode  : 0  Disable
+          1  Enable
+OK
+TestDevice> AT+MGPSSTA=           
+
+TestDevice> AT+MGPSPORT?
++MGPSPORT : 2947
+OK
+TestDevice> AT+MGPSPORT=?
+Command Syntax:AT+MGPSPORT[=<Port Number>]
+Parameters:
+  Port Number  : 1-65535
+OK
+TestDevice> AT+MGPSPORT=            
+
+TestDevice> AT+MGPSSRC?
++MGPSSRC : Standalone GPS(Built-in) 
+OK
+TestDevice> AT+MGPSSRC=?
+Command Syntax:AT+MGPSSRC[=<GPS Source>]
+Parameters:
+  GPS Source : 1 - Standalone GPS(Built-in)
+OK
+TestDevice> AT+MGPSSRC=           
+
+TestDevice> AT+MGPSNMEA?
++MGPSNMEA:
+ GPS is disabled
+OK
+TestDevice> AT+MGPSNMEA=?
+Command Syntax:AT+MGPSNMEA
+OK
+TestDevice> AT+MGPSNMEA=            
+
+TestDevice> AT+MGPSANTEN?
+  1 - GPS PORT Passive
+OK
+TestDevice> AT+MGPSANTEN=?
+Command Syntax:AT+MGPSANTEN[=<Antenna Connection>]
+Parameters:
+  Antenna Connection : 1 - GPS PORT Passive  2 - GPS PORT Active  
+OK
+TestDevice> AT+MGPSANTEN=             
+
+TestDevice> AT+MSOPTRST?
+Error: Invalid parameters.
+
+TestDevice> AT+MSOPTRST=?
++MSOPTRST:
+Command Syntax:
+  AT+MSOPTRST=<Action>,<Keep Carrier Settings>,<Keep IoT Settings>,<Wipeout data and logs>
+Parameter:
+  <Action>                : 0 - Pre-set action and options
+                            1 - Confirm action and options
+  <Keep Carrier Settings> : 0 - Disable; 1 - Enable (If no carrier, must set to 0)
+  <Keep IoT Settings>     : 0 - Disable; 1 - Enable (If no IoT, must set to 0)
+  <Wipeout data and logs> : 0 - Disable; 1 - Enable
+OK
+
+TestDevice> AT+MSOPTRST=            
+
+TestDevice> 
+Entering character mode
+Escape character is '^]'.

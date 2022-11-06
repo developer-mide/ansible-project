@@ -1,0 +1,87 @@
+  AT                   AT Echo OK
+  AT&R                 Reserved
+  AT&V                 Display modem active profile
+  AT&W                 Enable configurations you have been entered
+  AT+MADISS            Get/Set discovery service used by the modem
+  AT+MAEURD1           Get/Set Event UDP Report No.1
+  AT+MAEURD2           Get/Set Event UDP Report No.2
+  AT+MAEURD3           Get/Set Event UDP Report No.3
+  AT+MAIOTSSL          Get/Set IoT SSL Management
+  AT+MANMSR            Get/Set NMS Report
+  AT+MANMSSRV          Get/Set NMS Server
+  AT+MASNMP            Get/Set SNMP service
+  AT+MASNMPTRAP        Get/Set SNMP Trap
+  AT+MASNMPV3          Get/Set SNMP Version 3
+  AT+MAWSCLIENT        Get/Set Web service client
+  AT+MFDMZ             Get/Set firewall DMZ configuration
+  AT+MFGEN1            Get/Set firewall general configuration
+  AT+MFGEN2            Get/Set firewall other general configuration
+  AT+MFIP              Get/Set firewall IP list
+  AT+MFMAC             Get/Set firewall MAC list
+  AT+MFPORTFWD         Get/Set firewall Port Forwarding rule
+  AT+MFRST             Reset to default firewall
+  AT+MFRULE            Get/Set firewall rule
+  AT+MGPSANTEN         GPS/Set GPS Antenna Connection
+  AT+MGPSNMEA          GPS Ensential NMEA
+  AT+MGPSPORT          Get/Set GPS port
+  AT+MGPSSRC           Get/Set GPS status
+  AT+MGPSSTA           Get/Set GPS status
+  AT+MMAPN             Get/Set APN
+  AT+MMBOARDTEMP       Get Modem's Temperature
+  AT+MMCID             Get modem's SIM Card Number
+  AT+MMDNS             Get/Set Carrier DNS
+  AT+MMDNSPIPP         Get/Set Carrier DNS-Passthrough
+  AT+MMIMEI            Get Modem's MMIMEI
+  AT+MMIMI             Get modem's MMIMEI and MMIMSI
+  AT+MMIMSI            Get Modem's MMIMSI
+  AT+MMMGD             Delete SMSs
+  AT+MMMGL             List SMSs
+  AT+MMMGR             Read SMS
+  AT+MMMGS             Send SMS
+  AT+MMNEBCELL         Get Neighbour Cell Information
+  AT+MMNETRSSI         Get Modem's RSSI
+  AT+MMNUM             Get modem's Phone Number
+  AT+MMPIPP            Get/Set IP-Passthrough
+  AT+MMPOWERIN         Get Modem's Voltage
+  AT+MMSIMS            Get/Set SIM Card selection and Primary Slot
+  AT+MMSVRCELL         Get Serving Cell Information
+  AT+MMTYPE            Get/Set SIM Type
+  AT+MMWANIP           Get Modem's WWAN IP
+  AT+MNDDNS            Get/Set DDNS settings
+  AT+MNDDNSE           Get/Set DDNS mode
+  AT+MNEMAC            Get the MAC address of local Ethernet interface
+  AT+MNIPMAC           Show/Add/Delete/Release/ReleaseAll the MAC-IP address binding
+  AT+MNLAN             Show/Add/Edit/Delete the network LAN interface
+  AT+MNLANDHCP         Get/Set LAN's DHCP server
+  AT+MNLANDNS          Get/Set LAN's DNS server
+  AT+MNLANIGMP         Get/Set LAN's IGMP Snooping
+  AT+MNLANSTP          Get/Set LAN's Spanning Tree (STP)
+  AT+MNNETSP           Get download and upload speed
+  AT+MNOPENDNS         Get/Set OpenDNMS Cloud Filtering/Security
+  AT+MNPINGTM          Get ping time
+  AT+MNPORT            Get/Set the Ethernet port configuration
+  AT+MNSTATUS          Get the network status
+  AT+MSAUTH            Get/Set modem access authentication
+  AT+MSCNTO            Get/Set console and web session timeout
+  AT+MSGMI             Get manufacturer Identification
+  AT+MSGMR             Get modem Record Information
+  AT+MSIMG             Get the image status for both active and inactive images
+  AT+MSKA              Get/Set keep-alive mode 
+  AT+MSKAS             Get/Set keep-alive settings
+  AT+MSMNAME           Get/Set modem Name Setting
+  AT+MSNTP             Get/Set NTP server
+  AT+MSNTPSVR          Get/Set local NTP server
+  AT+MSOPTRST          Reset to default configurations with options: 1.Keep Carrier Settings; 2.Keep IoT Settings; 3.Wipeout data and logs
+  AT+MSPWD             Set password
+  AT+MSREB             Reboot the modem
+  AT+MSRTF             Reset the modem to the factory default settings of from non-volatile (NV) memory
+  AT+MSSERVICE         Get/Set service status and port
+  AT+MSSYSI            Get system summary information
+  AT+MSSYSLOG          Get/Set syslog server
+  AT+MSWEBUI           Get/Set Web UI protocol and port
+  ATA                  Quit
+  ATE0                 Disable Echo
+  ATE1                 Enable Echo
+  ATH                  Show a list of previously run AT commands
+  ATL                  List all available AT commands
+  ATO                  Quit

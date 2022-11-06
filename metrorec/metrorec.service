@@ -1,0 +1,17 @@
+[Unit]
+Description=Metrology Receiver and Recorder - metrorec - service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=utilidata-tobedetermined
+Nice=0
+ExecStart=/path/in/host/os/to/be/determined/metrorec_service.sh
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,117 @@
+  AT                   AT Echo OK
+  ATE0                 Disable Echo
+  ATE1                 Enable Echo
+  ATH                  Show a list of previously run AT commands
+  ATL                  List all available AT commands
+  AT&R                 Reserved
+  AT&V                 Display modem active profile
+  AT&W                 Enable configurations you have been entered
+  ATA                  Quit
+  ATO                  Quit
+  AT+MAEURD1           Get/Set Event UDP Report No.1
+  AT+MAEURD2           Get/Set Event UDP Report No.2
+  AT+MAEURD3           Get/Set Event UDP Report No.3
+  AT+MANMSR            Get/Set NMS Report
+  AT+MANMSSRV          Get/Set NMS Server
+  AT+MAWSCLIENT        Get/Set Web service client
+  AT+MAIOTSSL          Get/Set IoT SSL Management
+  AT+MADISS            Get/Set discovery service used by the modem
+  AT+MASNMP            Get/Set SNMP service
+  AT+MASNMPV3          Get/Set SNMP Version 3
+  AT+MASNMPTRAP        Get/Set SNMP Trap
+  AT+MFGEN             Get/Set firewall general configuration
+  AT+MFGENX            Get/Set firewall other general configuration
+  AT+MFDMZ             Get/Set firewall DMZ configuration
+  AT+MFPORTFWD         Get/Set firewall Port Forwarding rule
+  AT+MFMAC             Get/Set firewall MAC list
+  AT+MFIP              Get/Set firewall IP list
+  AT+MFRULE            Get/Set firewall rule
+  AT+MFRST             Reset to default firewall
+  AT+MMIMEI            Get Modem's MMIMEI
+  AT+MMIMSI            Get Modem's MMIMSI
+  AT+MMNETRSSI         Get Modem's RSSI
+  AT+MMBOARDTEMP       Get Modem's Temperature
+  AT+MMWANIP           Get Modem's WWAN IP
+  AT+MMNUM             Get modem's Phone Number
+  AT+MMIMI             Get modem's MMIMEI and MMIMSI
+  AT+MMCID             Get modem's SIM Card Number
+  AT+MMPIPP            Get/Set IP-Passthrough
+  AT+MMAPN             Get/Set APN
+  AT+MMPOWERIN         Get Modem's Voltage
+  AT+MMTYPE            Get/Set SIM Type
+  AT+MMMGS             Send SMS
+  AT+MMMGR             Read SMS
+  AT+MMMGL             List SMSs
+  AT+MMMGD             Delete SMSs
+  AT+MMSVRCELL         Get Serving Cell Information
+  AT+MMNEBCELL         Get Neighbour Cell Information
+  AT+MNLAN             Show/Add/Edit/Delete the network LAN interface
+  AT+MNLANDHCP         Get/Set LAN's DHCP server
+  AT+MNLANSTP          Get/Set LAN's Spanning Tree (STP)
+  AT+MNLANIGMP         Get/Set LAN's IGMP Snooping
+  AT+MNLANDNS          Get/Set LAN's DNS server
+  AT+MNLANDR           Get/Set the network LAN interface: Default Route
+  AT+MNIPMAC           Show/Add/Delete/Release/ReleaseAll the MAC-IP address binding
+  AT+MNEMAC            Get the MAC address of local Ethernet interface
+  AT+MNPORT            Get/Set the Ethernet port configuration
+  AT+MNSTATUS          Get the network status
+  AT+MNDDNSE           Get/Set DDNS mode
+  AT+MNDDNS            Get/Set DDNS settings
+  AT+MNOPENDNS         Get/Set OpenDNMS Cloud Filtering/Security
+  AT+MNDHCPREBIND      Get/Set DHCP Rebind Protection
+  AT+MNNETSP           Get download and upload speed
+  AT+MNPINGTM          Get ping time
+  AT+MNMWAN3           Get/Set loadbalance configuration
+  AT+MNMWAN3STA        Get/Set LoadBalance Enable Status
+  AT+MNMWAN3INFSTA     Get LoadBalance Interface Status
+  AT+MSCNTO            Get/Set console and web session timeout
+  AT+MSPWD             Set password
+  AT+MSGMI             Get manufacturer Identification
+  AT+MSSYSI            Get system summary information
+  AT+MSGMR             Get modem Record Information
+  AT+MSIMG             Get the image status for both active and inactive images
+  AT+MSMNAME           Get/Set modem Name Setting
+  AT+MSRTF             Reset the modem to the factory default settings of from non-volatile (NV) memory
+  AT+MSREB             Reboot the modem
+  AT+MSNTP             Get/Set NTP server
+  AT+MSNTPSVR          Get/Set local NTP server
+  AT+MSKA              Get/Set keep-alive mode 
+  AT+MSKAS             Get/Set keep-alive settings
+  AT+MSTR              Get Traffic status on interfaces
+  AT+MSSYSLOG          Get/Set syslog server
+  AT+MSSERVICE         Get/Set service status and port
+  AT+MSWEBUI           Get/Set Web UI protocol and port
+  AT+MSAUTH            Get/Set modem access authentication
+  AT+MWRADIO           Get/Set radio status, On or Off
+  AT+MWMODE            Get/Set radio mode
+  AT+MWDISTANCE        Get/Set radio Wireless Distance
+  AT+MWTXPOWER         Get/Set radio Tx power
+  AT+MWCHAN            Get/Set radio channel
+  AT+MWHTMODE          Get/Set radio high throughput mode
+  AT+MWMPDUAGG         Get/Set radio MPDU Aggregation
+  AT+MWSHORTGI         Get/Set radio short GI
+  AT+MWHTCAPAB         Get radio HT Capabilities Info
+  AT+MWAMSDU           Get radio maximum AMSDU (byte)
+  AT+MWAMPDU           Get radio maximum AMPDU (byte)
+  AT+MWRTSTHRESH       Get/Set radio RTS Threshold
+  AT+MWFRAGTHRESH      Get/Set radio Fragment Threshold
+  AT+MWMESHID          Get/Set radio virtual interface: Mesh ID
+  AT+MWMPATH           Get/Set radio virtual interface: Degree of Mesh Path Agility
+  AT+MWIFACE           List/Add/Delete radio virtual interface
+  AT+MWNETWORK         Get/Set radio virtual interface: Network
+  AT+MWAWC             Get/Set radio virtual interface: Access to Wired client
+  AT+MWSSID            Get/Set radio virtual interface: SSID
+  AT+MWDEVICEMODE      Get/Set radio virtual interface: Mode
+  AT+MWRATE            Get/Set radio virtual interface: TX bitrate
+  AT+MWWDS             Get/Set radio virtual interface: WDS
+  AT+MWSSIDBCAST       Get/Set radio virtual interface: ESSID Broadcast
+  AT+MWAPISOLATION     Get/Set radio virtual interface: AP Isolation
+  AT+MWENCRYPT         Get/Set radio virtual interface: Encryption Type
+  AT+MWSCAN            Get radio scanning information
+  AT+MWRSSI            Get radio RSSI
+  AT+MGPSSTA           Get/Set GPS status
+  AT+MGPSPORT          Get/Set GPS port
+  AT+MGPSSRC           Get/Set GPS status
+  AT+MGPSNMEA          GPS Ensential NMEA
+  AT+MGPSANTEN         GPS/Set GPS Antenna Connection
+  AT+MSOPTRST          Reset to default configurations with options: 1.Keep Carrier Settings; 2.Keep IoT Settings; 3.Wipeout data and logs

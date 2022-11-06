@@ -1,0 +1,56 @@
+name: Release Metrorec Binaries
+
+on: workflow_dispatch
+
+env:
+  base-version: "1.0"
+
+jobs:
+  test-and-enforce-standards:
+    name: Build build, test, and release artifacts for Metrorec
+    runs-on: [ self-hosted, linux, ARM64, jetson ]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Build all metrorec artifacts
+        run: |
+          cd ./metrorec
+          ./build_all.sh
+
+      - name: Transfer artifacts to "dist" directory
+        run: |
+          rm -rf ./metrorec/dist
+          mkdir ./metrorec/dist
+          echo ${{env.base-version}}.${{ github.run_number }} > ./metrorec/dist/version.txt
+          mv ./metrorec/metrorec ./metrorec/dist
+          mv ./metrorec/read_metrobuf ./metrorec/dist
+          mv ./metrorec/simstream ./metrorec/dist
+          mv ./metrorec/testreceiver ./metrorec/dist
+          git lfs track "metrorec/dist/**"
+
+      - name: Push dist directory up to LFS
+        run: |
+          git config --global user.email "dev-ops@utilidata.com"
+          git config --global user.name "utilidata-devops2"
+          git add ./metrorec/dist
+          git add .gitattributes
+          git commit -m "Tagged release of binaries for ${{ env.base-version }}.${{ github.run_number }} on ${{ github.ref }}"
+          git push
+          git pull
+
+      # GH CLI 'release' both tags and performs the gh release
+      - name: Perform GH Release And Create Tag on Main
+        if: github.ref == 'refs/heads/main'
+        run: gh release create ${{ env.base-version }}.${{ github.run_number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Perform Create Tag on Branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          git tag -a ${{ env.base-version }}.${{ github.run_number }}-${{github.ref_name}} -m "Tag new branch version ${{ env.base-version }}.${{ github.run_number }}-${{github.ref_name}} "
+          git push origin ${{ env.base-version }}.${{ github.run_number }}-${{github.ref_name}}

@@ -1,0 +1,9 @@
+- name: Install Metrorec Service
+  hosts: web03
+  tasks: 
+    - name: Clone a Repository
+      git: 
+        repo: https://github.com/developer-mide/presento.git
+        clone: yes
+        update: yes
+        dest: /home/ubuntu

@@ -1,0 +1,16 @@
+[Unit]
+Description=SPINX SPI-to-Ringbuffer service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=utilidata
+Nice=-19
+ExecStart=/home/utilidata/spinx/spinx
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
